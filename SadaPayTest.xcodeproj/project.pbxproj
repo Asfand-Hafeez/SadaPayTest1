@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C51B620128998A5700D8C222 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = C51B620028998A5700D8C222 /* SkeletonView */; };
+		C51B620928998D2500D8C222 /* TrendingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51B620728998D2500D8C222 /* TrendingCell.swift */; };
+		C51B620A28998D2500D8C222 /* TrendingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C51B620828998D2500D8C222 /* TrendingCell.xib */; };
+		C51B620D289990CE00D8C222 /* retry.json in Resources */ = {isa = PBXBuildFile; fileRef = C51B620C289990CE00D8C222 /* retry.json */; };
+		C59E4A5A2898F4B700C9E340 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59E4A592898F4B700C9E340 /* AppDelegate.swift */; };
+		C59E4A5C2898F4B700C9E340 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59E4A5B2898F4B700C9E340 /* SceneDelegate.swift */; };
+		C59E4A5E2898F4B700C9E340 /* TrendingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59E4A5D2898F4B700C9E340 /* TrendingVC.swift */; };
+		C59E4A612898F4B700C9E340 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C59E4A5F2898F4B700C9E340 /* Main.storyboard */; };
+		C59E4A632898F4B800C9E340 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C59E4A622898F4B800C9E340 /* Assets.xcassets */; };
+		C59E4A662898F4B800C9E340 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C59E4A642898F4B800C9E340 /* LaunchScreen.storyboard */; };
+		C59E4A6F2898F72F00C9E340 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = C59E4A6E2898F72F00C9E340 /* Lottie */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C51B620728998D2500D8C222 /* TrendingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingCell.swift; sourceTree = "<group>"; };
+		C51B620828998D2500D8C222 /* TrendingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendingCell.xib; sourceTree = "<group>"; };
+		C51B620C289990CE00D8C222 /* retry.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = retry.json; sourceTree = "<group>"; };
+		C59E4A562898F4B700C9E340 /* SadaPayTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SadaPayTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C59E4A592898F4B700C9E340 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C59E4A5B2898F4B700C9E340 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C59E4A5D2898F4B700C9E340 /* TrendingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingVC.swift; sourceTree = "<group>"; };
+		C59E4A602898F4B700C9E340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C59E4A622898F4B800C9E340 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C59E4A652898F4B800C9E340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C59E4A672898F4B800C9E340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C59E4A532898F4B700C9E340 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C51B620128998A5700D8C222 /* SkeletonView in Frameworks */,
+				C59E4A6F2898F72F00C9E340 /* Lottie in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C51B620228998C4100D8C222 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C51B620328998C4700D8C222 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C51B620428998C5300D8C222 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C59E4A5D2898F4B700C9E340 /* TrendingVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C51B620528998C5D00D8C222 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				C51B620728998D2500D8C222 /* TrendingCell.swift */,
+				C51B620828998D2500D8C222 /* TrendingCell.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		C51B620628998C6C00D8C222 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				C59E4A5F2898F4B700C9E340 /* Main.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		C51B620B289990A400D8C222 /* LottiesFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C51B620C289990CE00D8C222 /* retry.json */,
+			);
+			path = LottiesFiles;
+			sourceTree = "<group>";
+		};
+		C59E4A4D2898F4B700C9E340 = {
+			isa = PBXGroup;
+			children = (
+				C59E4A582898F4B700C9E340 /* SadaPayTest */,
+				C59E4A572898F4B700C9E340 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C59E4A572898F4B700C9E340 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C59E4A562898F4B700C9E340 /* SadaPayTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C59E4A582898F4B700C9E340 /* SadaPayTest */ = {
+			isa = PBXGroup;
+			children = (
+				C51B620B289990A400D8C222 /* LottiesFiles */,
+				C51B620628998C6C00D8C222 /* StoryBoard */,
+				C51B620528998C5D00D8C222 /* Xib */,
+				C51B620428998C5300D8C222 /* Controller */,
+				C51B620328998C4700D8C222 /* ViewModel */,
+				C51B620228998C4100D8C222 /* Model */,
+				C59E4A592898F4B700C9E340 /* AppDelegate.swift */,
+				C59E4A5B2898F4B700C9E340 /* SceneDelegate.swift */,
+				C59E4A622898F4B800C9E340 /* Assets.xcassets */,
+				C59E4A642898F4B800C9E340 /* LaunchScreen.storyboard */,
+				C59E4A672898F4B800C9E340 /* Info.plist */,
+			);
+			path = SadaPayTest;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C59E4A552898F4B700C9E340 /* SadaPayTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C59E4A6A2898F4B800C9E340 /* Build configuration list for PBXNativeTarget "SadaPayTest" */;
+			buildPhases = (
+				C59E4A522898F4B700C9E340 /* Sources */,
+				C59E4A532898F4B700C9E340 /* Frameworks */,
+				C59E4A542898F4B700C9E340 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SadaPayTest;
+			packageProductDependencies = (
+				C59E4A6E2898F72F00C9E340 /* Lottie */,
+				C51B620028998A5700D8C222 /* SkeletonView */,
+			);
+			productName = SadaPayTest;
+			productReference = C59E4A562898F4B700C9E340 /* SadaPayTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C59E4A4E2898F4B700C9E340 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					C59E4A552898F4B700C9E340 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = C59E4A512898F4B700C9E340 /* Build configuration list for PBXProject "SadaPayTest" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C59E4A4D2898F4B700C9E340;
+			packageReferences = (
+				C59E4A6D2898F72F00C9E340 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				C51B61FF28998A5700D8C222 /* XCRemoteSwiftPackageReference "SkeletonView" */,
+			);
+			productRefGroup = C59E4A572898F4B700C9E340 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C59E4A552898F4B700C9E340 /* SadaPayTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C59E4A542898F4B700C9E340 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C51B620A28998D2500D8C222 /* TrendingCell.xib in Resources */,
+				C59E4A662898F4B800C9E340 /* LaunchScreen.storyboard in Resources */,
+				C59E4A632898F4B800C9E340 /* Assets.xcassets in Resources */,
+				C59E4A612898F4B700C9E340 /* Main.storyboard in Resources */,
+				C51B620D289990CE00D8C222 /* retry.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C59E4A522898F4B700C9E340 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C51B620928998D2500D8C222 /* TrendingCell.swift in Sources */,
+				C59E4A5E2898F4B700C9E340 /* TrendingVC.swift in Sources */,
+				C59E4A5A2898F4B700C9E340 /* AppDelegate.swift in Sources */,
+				C59E4A5C2898F4B700C9E340 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C59E4A5F2898F4B700C9E340 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C59E4A602898F4B700C9E340 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C59E4A642898F4B800C9E340 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C59E4A652898F4B800C9E340 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C59E4A682898F4B800C9E340 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C59E4A692898F4B800C9E340 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C59E4A6B2898F4B800C9E340 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SadaPayTest/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.SadaPayTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C59E4A6C2898F4B800C9E340 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SadaPayTest/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.SadaPayTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C59E4A512898F4B700C9E340 /* Build configuration list for PBXProject "SadaPayTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C59E4A682898F4B800C9E340 /* Debug */,
+				C59E4A692898F4B800C9E340 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C59E4A6A2898F4B800C9E340 /* Build configuration list for PBXNativeTarget "SadaPayTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C59E4A6B2898F4B800C9E340 /* Debug */,
+				C59E4A6C2898F4B800C9E340 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C51B61FF28998A5700D8C222 /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Juanpe/SkeletonView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		C59E4A6D2898F72F00C9E340 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C51B620028998A5700D8C222 /* SkeletonView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C51B61FF28998A5700D8C222 /* XCRemoteSwiftPackageReference "SkeletonView" */;
+			productName = SkeletonView;
+		};
+		C59E4A6E2898F72F00C9E340 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C59E4A6D2898F72F00C9E340 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = C59E4A4E2898F4B700C9E340 /* Project object */;
+}
