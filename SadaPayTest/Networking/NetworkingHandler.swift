@@ -13,13 +13,11 @@ class NetworkingHandler {
     func getDataFromAPi<T:Codable>(url:URL,resultType:T.Type,completion: @escaping Completion<T>) {
         URLSession.shared.dataTask(with: url) { data, urlResponse, error in
             if let error = error {
-               return  completion(.failure(error))
+                return  completion(.failure(error))
             }
             guard let data = data else {
                 return
             }
-            
-            
             do {
                 
                 let encoder = JSONDecoder()

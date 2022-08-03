@@ -10,18 +10,18 @@ import Lottie
 import SkeletonView
 
 class TrendingVC: UIViewController {
-    
-    
     // MARK: - Outlets & Variables
     @IBOutlet weak var animationMainView: UIView!
     @IBOutlet weak var animationView: AnimationView!
     lazy var refreshControl = UIRefreshControl()
     var tableView = UITableView()
     let trendingVM  = TrendingVM()
+    var isSearching = false
+    var users = [Item]()
     
     
     // MARK: - View Controller Life Cycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,6 +30,7 @@ class TrendingVC: UIViewController {
         tableViewSetup()
         retryApiData()
         trendingObserveData()
+        searchControllerSetup()
         
     }
     
@@ -40,11 +41,50 @@ class TrendingVC: UIViewController {
     }
     
     
-    // MARK: - Api Observer
+    // MARK: - Button Actions
+    @IBAction func retryBtnTapped(_ sender: Any) {
+        retryApiData()
+    }
+    
+    @objc func moreBtnTapped() {
+        
+    }
+    
+    
+}
+
+
+// MARK: - Table View Delegate
+extension TrendingVC:SkeletonTableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return  isSearching == true ? self.users.count  : trendingVM.trendingData.value?.items.count ??  10
+    }
+    
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        return TrendingCell().identifier
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell  = tableView.dequeueReusableCell(withIdentifier: TrendingCell().identifier, for: indexPath) as! TrendingCell
+        
+        if trendingVM.trendingData.value != nil {
+            cell.item = isSearching == true  ?  self.users[indexPath.row] : trendingVM.trendingData.value?.items[indexPath.row]
+        }
+        return cell
+    }
+    
+}
+
+
+// MARK: - All Other Stuff
+
+extension TrendingVC {
+    // MARK: - Api Observer Method
     func trendingObserveData()  {
         // Success Response
         trendingVM.trendingData.bind { [weak self] _  in
             guard let self = self else {return}
+            self.isSearching = false
             guard let _ = self.trendingVM.trendingData.value else {return}
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 self.tableView.reloadData()
@@ -55,22 +95,22 @@ class TrendingVC: UIViewController {
         // Error Response
         trendingVM.error.bind { [weak self] _ in
             guard let self = self else {return}
+            self.isSearching = false
             if self.trendingVM.error.value != "" {
-            print("Error --------------")
-            DispatchQueue.main.async {
-                self.tableView.isHidden = true
-                self.animationMainView.isHidden = false
-                self.lottieAnimationSetup()
-            }
+                print("Error --------------")
+                DispatchQueue.main.async {
+                    
+                    self.tableView.isHidden = true
+                    self.animationMainView.isHidden = false
+                    self.lottieAnimationSetup()
+                }
             }
         }
         
         
     }
     
-    
-   
-    // MARK: - Setus TV
+    // MARK: - Setus TV Method
     func tableViewSetup() {
         setupTableView(tableView)
         tableView.dataSource = self
@@ -83,14 +123,14 @@ class TrendingVC: UIViewController {
         tableView.refreshControl = refreshControl
     }
     
-    
-    // MARK: - Pull to Refresh Action
+    // MARK: - Pull to Refresh Action Method
     @objc func pullToRefreshCalled(refreshControl: UIRefreshControl) {
         retryApiData()
         refreshControl.endRefreshing()
     }
-
     
+    
+    // MARK: - Retry Api Call Method
     func retryApiData()  {
         animationMainView.isHidden = true
         tableView.isHidden = false
@@ -101,15 +141,18 @@ class TrendingVC: UIViewController {
         }
     }
     
-    // MARK: - Add More Button In NavBar
+    
+    
+    // MARK: - Add More Button In NavBar Method
     func addMoreBtnInNavBar() {
         let rightBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "more"), style: .plain, target: self, action: #selector(moreBtnTapped))
         self.navigationItem.rightBarButtonItem = rightBarButtonItem
-        self.navigationController?.navigationBar.tintColor = .black
+        self.navigationController?.navigationBar.tintColor = UIColor.midnightBlue
     }
     
     
-    // MARK: - Lottie Animation
+    
+    // MARK: - Lottie Animation Method
     func lottieAnimationSetup()  {
         animationView.contentMode = .scaleAspectFit
         animationView.loopMode = .loop
@@ -118,38 +161,40 @@ class TrendingVC: UIViewController {
     }
     
     
-    // MARK: - Button Actions
-    @IBAction func retryBtnTapped(_ sender: Any) {
-        
-        retryApiData()
-        
+    // MARK: - Search Controller Method
+    
+    func searchControllerSetup() {
+        let sc = UISearchController(searchResultsController: nil)
+        sc.delegate = self
+        sc.searchResultsUpdater = self
+        sc.obscuresBackgroundDuringPresentation = false
+        sc.searchBar.placeholder = "Search Users"
+        self.navigationItem.searchController = sc
+        self.definesPresentationContext = true
     }
-    
-    @objc func moreBtnTapped() {
-        print("More Btn Tapped")
-    }
-    
-    
 }
 
 
-extension TrendingVC:SkeletonTableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return  trendingVM.trendingData.value?.items.count ??  10
-    }
+
+
+
+// MARK: - Search Controller Delegate
+
+extension TrendingVC: UISearchControllerDelegate,UISearchResultsUpdating {
     
-    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
-        return TrendingCell().identifier
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell  = tableView.dequeueReusableCell(withIdentifier: TrendingCell().identifier, for: indexPath) as! TrendingCell
-        
-        if trendingVM.trendingData.value != nil {
-        cell.item = trendingVM.trendingData.value?.items[indexPath.row]
+    func updateSearchResults(for searchController: UISearchController) {
+        print("Searching with: " + (searchController.searchBar.text ?? ""))
+        self.isSearching = true
+        if let text = searchController.searchBar.text {
+            if text != "" {
+                self.users = self.trendingVM.trendingData.value?.items.matching(text) ?? []
+            }else {
+                self.users = self.trendingVM.trendingData.value?.items ?? []
+            }
+            
+            
         }
-        return cell
+        self.tableView.reloadData()
     }
-    
 }
-
 

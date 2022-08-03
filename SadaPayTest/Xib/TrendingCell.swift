@@ -23,11 +23,9 @@ class TrendingCell: UITableViewCell {
         self.selectionStyle = .none
         
     }
-
+    
     var item :Item! {
-        
         didSet {
-            
             profileImg.sd_setImage(with: URL(string: item.owner.avatarUrl),placeholderImage:UIImage(named: "user"))
             nameLbl.text = item.defaultBranch
             titleLbl.text = item.fullName
@@ -45,6 +43,6 @@ class TrendingCell: UITableViewCell {
             
         }
     }
-   
+    
     
 }

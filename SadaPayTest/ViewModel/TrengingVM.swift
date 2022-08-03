@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-
 class TrendingVM {
     var trendingData : Observale<TrendingModel?> = Observale(nil)
     var error :Observale<String> = Observale("")
@@ -23,9 +22,4 @@ class TrendingVM {
         }
         
     }
-    
-    
-    
-    
-    
 }

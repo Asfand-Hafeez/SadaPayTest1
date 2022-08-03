@@ -21,13 +21,12 @@ extension UIViewController{
     func transparentNavBar() {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
-//        navigationController?.navigationBar.isTranslucent = true
     }
     func restoreNavBar() {
         navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
         navigationController?.navigationBar.shadowImage = nil
     }
-        
+    
     func setupTableView(_ tableView: UITableView) {
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
