@@ -21,6 +21,11 @@
 		C5EB4F7A2899949900640877 /* Trending.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EB4F792899949900640877 /* Trending.swift */; };
 		C5EB4F7D289997C200640877 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EB4F7C289997C200640877 /* UIViewExt.swift */; };
 		C5EB4F7F28999AAB00640877 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EB4F7E28999AAB00640877 /* UIViewControllerExt.swift */; };
+		C5EB4F83289A909900640877 /* NetworkingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EB4F82289A909900640877 /* NetworkingHandler.swift */; };
+		C5EB4F85289A91B400640877 /* TrengingVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EB4F84289A91B400640877 /* TrengingVM.swift */; };
+		C5EB4F88289A920800640877 /* Obserable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EB4F87289A920800640877 /* Obserable.swift */; };
+		C5EB4F8B289A950300640877 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EB4F8A289A950300640877 /* Constant.swift */; };
+		C5EB4F8E289AA54900640877 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = C5EB4F8D289AA54900640877 /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +43,10 @@
 		C5EB4F792899949900640877 /* Trending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trending.swift; sourceTree = "<group>"; };
 		C5EB4F7C289997C200640877 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		C5EB4F7E28999AAB00640877 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
+		C5EB4F82289A909900640877 /* NetworkingHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingHandler.swift; sourceTree = "<group>"; };
+		C5EB4F84289A91B400640877 /* TrengingVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrengingVM.swift; sourceTree = "<group>"; };
+		C5EB4F87289A920800640877 /* Obserable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obserable.swift; sourceTree = "<group>"; };
+		C5EB4F8A289A950300640877 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5EB4F8E289AA54900640877 /* SDWebImage in Frameworks */,
 				C51B620128998A5700D8C222 /* SkeletonView in Frameworks */,
 				C59E4A6F2898F72F00C9E340 /* Lottie in Frameworks */,
 			);
@@ -64,6 +74,7 @@
 		C51B620328998C4700D8C222 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C5EB4F84289A91B400640877 /* TrengingVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -120,6 +131,9 @@
 		C59E4A582898F4B700C9E340 /* SadaPayTest */ = {
 			isa = PBXGroup;
 			children = (
+				C5EB4F89289A94F500640877 /* Constant */,
+				C5EB4F86289A91F900640877 /* Observable */,
+				C5EB4F81289A906E00640877 /* Networking */,
 				C5EB4F7B2899976000640877 /* Extension */,
 				C51B620B289990A400D8C222 /* LottiesFiles */,
 				C51B620628998C6C00D8C222 /* StoryBoard */,
@@ -145,6 +159,30 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		C5EB4F81289A906E00640877 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C5EB4F82289A909900640877 /* NetworkingHandler.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		C5EB4F86289A91F900640877 /* Observable */ = {
+			isa = PBXGroup;
+			children = (
+				C5EB4F87289A920800640877 /* Obserable.swift */,
+			);
+			path = Observable;
+			sourceTree = "<group>";
+		};
+		C5EB4F89289A94F500640877 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				C5EB4F8A289A950300640877 /* Constant.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -164,6 +202,7 @@
 			packageProductDependencies = (
 				C59E4A6E2898F72F00C9E340 /* Lottie */,
 				C51B620028998A5700D8C222 /* SkeletonView */,
+				C5EB4F8D289AA54900640877 /* SDWebImage */,
 			);
 			productName = SadaPayTest;
 			productReference = C59E4A562898F4B700C9E340 /* SadaPayTest.app */;
@@ -196,6 +235,7 @@
 			packageReferences = (
 				C59E4A6D2898F72F00C9E340 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				C51B61FF28998A5700D8C222 /* XCRemoteSwiftPackageReference "SkeletonView" */,
+				C5EB4F8C289AA54900640877 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = C59E4A572898F4B700C9E340 /* Products */;
 			projectDirPath = "";
@@ -226,11 +266,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5EB4F83289A909900640877 /* NetworkingHandler.swift in Sources */,
 				C5EB4F7D289997C200640877 /* UIViewExt.swift in Sources */,
 				C51B620928998D2500D8C222 /* TrendingCell.swift in Sources */,
 				C59E4A5E2898F4B700C9E340 /* TrendingVC.swift in Sources */,
+				C5EB4F85289A91B400640877 /* TrengingVM.swift in Sources */,
+				C5EB4F88289A920800640877 /* Obserable.swift in Sources */,
 				C5EB4F7A2899949900640877 /* Trending.swift in Sources */,
 				C59E4A5A2898F4B700C9E340 /* AppDelegate.swift in Sources */,
+				C5EB4F8B289A950300640877 /* Constant.swift in Sources */,
 				C5EB4F7F28999AAB00640877 /* UIViewControllerExt.swift in Sources */,
 				C59E4A5C2898F4B700C9E340 /* SceneDelegate.swift in Sources */,
 			);
@@ -466,6 +510,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		C5EB4F8C289AA54900640877 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -478,6 +530,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C59E4A6D2898F72F00C9E340 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		C5EB4F8D289AA54900640877 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C5EB4F8C289AA54900640877 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

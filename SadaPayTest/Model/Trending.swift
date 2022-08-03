@@ -5,30 +5,25 @@
 //  Created by Asfand Hafeez on 02/08/2022.
 //
 
-
-
-
 import Foundation
 
 // MARK: - BlogModel
-struct TrendingModel {
+struct TrendingModel:Codable {
     var totalCount: Int
     var incompleteResults: Bool
     var items: [Item]
 }
 
 // MARK: - Item
-struct Item {
+struct Item :Codable{
     var id: Int
     var nodeId, name, fullName: String
     var owner: Owner
     var htmlUrl: String
-    var itemDescription: String
+    var description: String
     var fork: Bool
     var url: String
     var forksUrl: String
-    
-    
     var gitUrl, sshUrl: String
     var cloneUrl: String
     var svnUrl: String
@@ -51,7 +46,7 @@ struct Item {
 
 
 // MARK: - Owner
-struct Owner {
+struct Owner :Codable{
     var login: String
     var id: Int
     var nodeId: String
