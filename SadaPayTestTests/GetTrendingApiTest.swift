@@ -7,8 +7,10 @@
 
 import XCTest
 @testable import SadaPayTest
-class GetTrendingApiTest: XCTestCase {
 
+
+
+class GetTrendingApiTest: XCTestCase {
     func test_trendingUserApi(){
         let network = NetworkingHandler()
         let expectation = self.expectation(description: "trendingUserApi")
