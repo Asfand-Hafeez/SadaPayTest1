@@ -7,7 +7,7 @@
 
 import Foundation
 
-// MARK: - BlogModel
+// MARK: - Trending Model APi Model
 struct TrendingModel:Codable {
     var totalCount: Int
     var incompleteResults: Bool
@@ -19,7 +19,6 @@ struct Item :Codable{
     var id: Int
     var nodeId, name, fullName: String
     var owner: Owner
-    var htmlUrl: String
     var description: String
     var fork: Bool
     var url: String
@@ -41,8 +40,6 @@ struct Item :Codable{
     var defaultBranch: String
     var score: Int
 }
-
-
 
 
 // MARK: - Owner

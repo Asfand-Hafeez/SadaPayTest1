@@ -5,6 +5,8 @@
 //  Created by Asfand Hafeez on 03/08/2022.
 //
 
+// MARK: - Observable Class
+///  Obserable Generic Type  when  Api hit it will be get notified with resonse
 final class Observale<T> {
     //1
     typealias Listener = (T) -> Void

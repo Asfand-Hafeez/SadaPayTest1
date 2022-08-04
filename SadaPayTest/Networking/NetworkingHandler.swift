@@ -8,6 +8,8 @@
 import Foundation
 
 
+// MARK: - Network Class
+/// Generic  Method using  codable  Url session with Completion Handler
 class NetworkingHandler {
     static let instance = NetworkingHandler()
     func getDataFromAPi<T:Codable>(url:URL,resultType:T.Type,completion: @escaping Completion<T>) {
@@ -21,9 +23,8 @@ class NetworkingHandler {
             do {
                 
                 let encoder = JSONDecoder()
-                encoder.keyDecodingStrategy = .convertFromSnakeCase
+                encoder.keyDecodingStrategy = .convertFromSnakeCase  /// => Convert simple model to Snake
                 let parse = try encoder.decode(T.self, from: data)
-                
                 completion(.success(parse))
             }
             catch  let error {

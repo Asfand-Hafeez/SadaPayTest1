@@ -9,6 +9,9 @@ import UIKit
 import Lottie
 import SkeletonView
 
+
+
+
 class TrendingVC: UIViewController {
     // MARK: - Outlets & Variables
     @IBOutlet weak var animationMainView: UIView!
@@ -80,26 +83,32 @@ extension TrendingVC:SkeletonTableViewDataSource{
 
 extension TrendingVC {
     // MARK: - Api Observer Method
+    /// Using this observer  we are updating our View  on the base of api response   this function is called api hit
+    
     func trendingObserveData()  {
-        // Success Response
+        
+        /// Success Response
         trendingVM.trendingData.bind { [weak self] _  in
             guard let self = self else {return}
             self.isSearching = false
             guard let _ = self.trendingVM.trendingData.value else {return}
+            
+            /// DispatchQueue  with delay for showing Shimmer
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 self.tableView.reloadData()
                 self.tableView.hideSkeleton()
                 self.animationView.stop()
             }
         }
-        // Error Response
+        
+        /// Error Response
+        ///
         trendingVM.error.bind { [weak self] _ in
             guard let self = self else {return}
             self.isSearching = false
             if self.trendingVM.error.value != "" {
                 print("Error --------------")
                 DispatchQueue.main.async {
-                    
                     self.tableView.isHidden = true
                     self.animationMainView.isHidden = false
                     self.lottieAnimationSetup()
@@ -110,7 +119,8 @@ extension TrendingVC {
         
     }
     
-    // MARK: - Setus TV Method
+    // MARK: - Setup TV Method
+    /// register table View  Xib , add pull to refresh in table view to see new data user pull down
     func tableViewSetup() {
         setupTableView(tableView)
         tableView.dataSource = self
@@ -124,6 +134,7 @@ extension TrendingVC {
     }
     
     // MARK: - Pull to Refresh Action Method
+    /// when User pull down it will refresh api
     @objc func pullToRefreshCalled(refreshControl: UIRefreshControl) {
         retryApiData()
         refreshControl.endRefreshing()
@@ -131,6 +142,7 @@ extension TrendingVC {
     
     
     // MARK: - Retry Api Call Method
+    /// refresh Api or retry api
     func retryApiData()  {
         animationMainView.isHidden = true
         tableView.isHidden = false
@@ -144,6 +156,7 @@ extension TrendingVC {
     
     
     // MARK: - Add More Button In NavBar Method
+    /// add vertical dot button in navbar
     func addMoreBtnInNavBar() {
         let rightBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "more"), style: .plain, target: self, action: #selector(moreBtnTapped))
         self.navigationItem.rightBarButtonItem = rightBarButtonItem
@@ -153,6 +166,7 @@ extension TrendingVC {
     
     
     // MARK: - Lottie Animation Method
+    /// lottie animation attributes setting
     func lottieAnimationSetup()  {
         animationView.contentMode = .scaleAspectFit
         animationView.loopMode = .loop
@@ -162,7 +176,7 @@ extension TrendingVC {
     
     
     // MARK: - Search Controller Method
-    
+    ///  adding search controller in navbar
     func searchControllerSetup() {
         let sc = UISearchController(searchResultsController: nil)
         sc.delegate = self
@@ -175,13 +189,11 @@ extension TrendingVC {
 }
 
 
-
-
-
 // MARK: - Search Controller Delegate
 
 extension TrendingVC: UISearchControllerDelegate,UISearchResultsUpdating {
     
+    /// when user try to search something it will be called it is locally search
     func updateSearchResults(for searchController: UISearchController) {
         print("Searching with: " + (searchController.searchBar.text ?? ""))
         self.isSearching = true
@@ -191,8 +203,6 @@ extension TrendingVC: UISearchControllerDelegate,UISearchResultsUpdating {
             }else {
                 self.users = self.trendingVM.trendingData.value?.items ?? []
             }
-            
-            
         }
         self.tableView.reloadData()
     }

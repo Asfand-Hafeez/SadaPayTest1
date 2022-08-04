@@ -5,28 +5,15 @@
 //  Created by Asfand Hafeez on 02/08/2022.
 //
 
-import Foundation
+
 import UIKit
-import Lottie
+
+
 extension UIViewController{
-    func setupNavBar(foregroundColor: UIColor, textColor: UIColor) {
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: textColor]
-        if #available(iOS 13.0, *) {
-            navigationController?.navigationBar.barTintColor = .systemBackground
-        } else {
-            navigationController?.navigationBar.barTintColor = .white
-        }
-        navigationController?.navigationBar.tintColor = textColor
-    }
-    func transparentNavBar() {
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-    }
-    func restoreNavBar() {
-        navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
-        navigationController?.navigationBar.shadowImage = nil
-    }
     
+    
+    /// Add Table view Programmatically
+    /// - Parameter tableView: just pass tableView type variable
     func setupTableView(_ tableView: UITableView) {
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false

@@ -9,8 +9,8 @@ import UIKit
 import SDWebImage
 
 class TrendingCell: UITableViewCell {
+    // MARK: - Variables and outlets
     @IBOutlet weak var descriptionLbl: UILabel!
-    
     @IBOutlet weak var detailSV: UIStackView!
     @IBOutlet weak var startLbl: UILabel!
     @IBOutlet weak var langLbl: UILabel!
@@ -18,12 +18,15 @@ class TrendingCell: UITableViewCell {
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var profileImg: UIImageView!
     var identifier = "TrendingCell"
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.selectionStyle = .none
         
     }
     
+    
+    /// Setup Data from Api Response
     var item :Item! {
         didSet {
             profileImg.sd_setImage(with: URL(string: item.owner.avatarUrl),placeholderImage:UIImage(named: "user"))

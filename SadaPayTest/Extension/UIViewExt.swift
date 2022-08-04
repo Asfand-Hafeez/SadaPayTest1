@@ -7,6 +7,11 @@
 
 import UIKit
 
+
+// MARK: - Live Rendring
+
+/// Using this we can change our view layout without connecting it to SB
+
 @IBDesignable
 class DesignableView: UIView {
 }
