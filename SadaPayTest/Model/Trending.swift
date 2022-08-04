@@ -7,6 +7,8 @@
 
 import Foundation
 
+/// Anything related to api response or if anything need to change in api response it will be done here
+
 // MARK: - Trending Model APi Model
 struct TrendingModel:Codable {
     var totalCount: Int

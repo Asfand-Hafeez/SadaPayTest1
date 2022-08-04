@@ -26,7 +26,19 @@
 		C5EB4F88289A920800640877 /* Obserable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EB4F87289A920800640877 /* Obserable.swift */; };
 		C5EB4F8B289A950300640877 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EB4F8A289A950300640877 /* Constant.swift */; };
 		C5EB4F8E289AA54900640877 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = C5EB4F8D289AA54900640877 /* SDWebImage */; };
+		C5F4045D289BEBEF00DAA45B /* SadaPayTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F4045C289BEBEF00DAA45B /* SadaPayTestTests.swift */; };
+		C5F40464289BEC2B00DAA45B /* GetTrendingApiTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F40463289BEC2B00DAA45B /* GetTrendingApiTest.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C5F4045E289BEBEF00DAA45B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C59E4A4E2898F4B700C9E340 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C59E4A552898F4B700C9E340;
+			remoteInfo = SadaPayTest;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		C51B620728998D2500D8C222 /* TrendingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingCell.swift; sourceTree = "<group>"; };
@@ -47,6 +59,10 @@
 		C5EB4F84289A91B400640877 /* TrengingVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrengingVM.swift; sourceTree = "<group>"; };
 		C5EB4F87289A920800640877 /* Obserable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obserable.swift; sourceTree = "<group>"; };
 		C5EB4F8A289A950300640877 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		C5F4044E289BE77800DAA45B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C5F4045A289BEBEE00DAA45B /* SadaPayTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SadaPayTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5F4045C289BEBEF00DAA45B /* SadaPayTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SadaPayTestTests.swift; sourceTree = "<group>"; };
+		C5F40463289BEC2B00DAA45B /* GetTrendingApiTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTrendingApiTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +73,13 @@
 				C5EB4F8E289AA54900640877 /* SDWebImage in Frameworks */,
 				C51B620128998A5700D8C222 /* SkeletonView in Frameworks */,
 				C59E4A6F2898F72F00C9E340 /* Lottie in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5F40457289BEBEE00DAA45B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,7 +139,9 @@
 			isa = PBXGroup;
 			children = (
 				C59E4A582898F4B700C9E340 /* SadaPayTest */,
+				C5F4045B289BEBEE00DAA45B /* SadaPayTestTests */,
 				C59E4A572898F4B700C9E340 /* Products */,
+				C5F4044D289BE77800DAA45B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				C59E4A562898F4B700C9E340 /* SadaPayTest.app */,
+				C5F4045A289BEBEE00DAA45B /* SadaPayTestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -183,6 +209,23 @@
 			path = Constant;
 			sourceTree = "<group>";
 		};
+		C5F4044D289BE77800DAA45B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5F4044E289BE77800DAA45B /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5F4045B289BEBEE00DAA45B /* SadaPayTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				C5F4045C289BEBEF00DAA45B /* SadaPayTestTests.swift */,
+				C5F40463289BEC2B00DAA45B /* GetTrendingApiTest.swift */,
+			);
+			path = SadaPayTestTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -208,6 +251,24 @@
 			productReference = C59E4A562898F4B700C9E340 /* SadaPayTest.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C5F40459289BEBEE00DAA45B /* SadaPayTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5F40460289BEBEF00DAA45B /* Build configuration list for PBXNativeTarget "SadaPayTestTests" */;
+			buildPhases = (
+				C5F40456289BEBEE00DAA45B /* Sources */,
+				C5F40457289BEBEE00DAA45B /* Frameworks */,
+				C5F40458289BEBEE00DAA45B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C5F4045F289BEBEF00DAA45B /* PBXTargetDependency */,
+			);
+			name = SadaPayTestTests;
+			productName = SadaPayTestTests;
+			productReference = C5F4045A289BEBEE00DAA45B /* SadaPayTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -220,6 +281,10 @@
 				TargetAttributes = {
 					C59E4A552898F4B700C9E340 = {
 						CreatedOnToolsVersion = 13.4.1;
+					};
+					C5F40459289BEBEE00DAA45B = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = C59E4A552898F4B700C9E340;
 					};
 				};
 			};
@@ -242,6 +307,7 @@
 			projectRoot = "";
 			targets = (
 				C59E4A552898F4B700C9E340 /* SadaPayTest */,
+				C5F40459289BEBEE00DAA45B /* SadaPayTestTests */,
 			);
 		};
 /* End PBXProject section */
@@ -256,6 +322,13 @@
 				C59E4A632898F4B800C9E340 /* Assets.xcassets in Resources */,
 				C59E4A612898F4B700C9E340 /* Main.storyboard in Resources */,
 				C51B620D289990CE00D8C222 /* retry.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5F40458289BEBEE00DAA45B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +353,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C5F40456289BEBEE00DAA45B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5F40464289BEC2B00DAA45B /* GetTrendingApiTest.swift in Sources */,
+				C5F4045D289BEBEF00DAA45B /* SadaPayTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C5F4045F289BEBEF00DAA45B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C59E4A552898F4B700C9E340 /* SadaPayTest */;
+			targetProxy = C5F4045E289BEBEF00DAA45B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C59E4A5F2898F4B700C9E340 /* Main.storyboard */ = {
@@ -472,6 +562,40 @@
 			};
 			name = Release;
 		};
+		C5F40461289BEBEF00DAA45B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.SadaPayTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SadaPayTest.app/SadaPayTest";
+			};
+			name = Debug;
+		};
+		C5F40462289BEBEF00DAA45B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.SadaPayTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SadaPayTest.app/SadaPayTest";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -489,6 +613,15 @@
 			buildConfigurations = (
 				C59E4A6B2898F4B800C9E340 /* Debug */,
 				C59E4A6C2898F4B800C9E340 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5F40460289BEBEF00DAA45B /* Build configuration list for PBXNativeTarget "SadaPayTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5F40461289BEBEF00DAA45B /* Debug */,
+				C5F40462289BEBEF00DAA45B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
