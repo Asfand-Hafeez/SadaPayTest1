@@ -9,8 +9,7 @@ import Foundation
 
 
 typealias Completion<T> = (Result<T,Error>) -> Void
-let BASE_URL = "https://api.github.com/search/repositories?q=language=+sort:st"
-
+let BASE_URL = "https://api.github.com/search/repositories?q=language=+sort:stars"
 
 
 
